@@ -5,7 +5,8 @@ import org.passay.CharacterRule;
 import org.passay.EnglishCharacterData;
 import org.passay.PasswordGenerator;
 
-public class RandomPasswordGenerator {
+public class RandomPasswordGenerator implements org.example.PasswordGenerator {
+
     /**
      * Special characters allowed in password.
      */
@@ -13,6 +14,8 @@ public class RandomPasswordGenerator {
 
     public static final String ERROR_CODE = "ERRONEOUS_SPECIAL_CHARS";
 
+
+    @Override
     public String generatePassword() {
         PasswordGenerator gen = new PasswordGenerator();
 
